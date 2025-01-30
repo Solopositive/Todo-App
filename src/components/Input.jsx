@@ -14,12 +14,9 @@ const Input = ({ setTodos, todos }) => {
 
   const addTodoHandler = (data) => {
     setInput(data.todo);
-    // Add additional logic to handle the new todo item
-    //  console.log(data.todo);
-    setTodos([{ title: data.todo} , ...todos ]);
+    setTodos([{ title: data.todo }, ...todos]);
     reset();
   };
-
 
   return (
     <div>
