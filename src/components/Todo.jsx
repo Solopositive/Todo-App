@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 const Todo = ({ todos, setTodos }) => {
   useEffect(() => {
@@ -17,6 +17,10 @@ const Todo = ({ todos, setTodos }) => {
         setTodos(todos.filter((item) => item.id !== userId));
       });
   };
+
+  // const updateTodoHandler = (userId) => {
+  //   setTodos(todos.map((item) => item.id === userId ? {...item, title: item.title + "!!!"} : item ));
+  // }
 
   return (
     <div className="mx-4">
